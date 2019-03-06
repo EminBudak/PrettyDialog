@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TestPrettyDialog.iml" filepath="$PROJECT_DIR$/TestPrettyDialog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PrettyDialog.iml" filepath="$PROJECT_DIR$/PrettyDialog.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/prettydialog/prettydialog.iml" filepath="$PROJECT_DIR$/prettydialog/prettydialog.iml" />
     </modules>

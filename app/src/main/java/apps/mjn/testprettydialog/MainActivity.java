@@ -42,8 +42,10 @@ public class MainActivity extends AppCompatActivity {
                                 // Do what you gotta do
                             }
                 })
+                .setIconVisibility(false)
                 .setTitle("PrettyDialog Title")
                 .setMessage("PrettyDialog Message")
+                .setBackgroundDismiss(true)
                 .addButton(
                         "OK",
                         R.color.pdlg_color_white,
