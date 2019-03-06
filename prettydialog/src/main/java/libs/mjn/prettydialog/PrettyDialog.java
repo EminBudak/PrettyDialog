@@ -40,7 +40,7 @@ import static android.widget.ImageView.ScaleType.CENTER_INSIDE;
 public class PrettyDialog extends AppCompatDialog {
 
     Resources resources;
-    LinearLayout ll_content, ll_buttons;
+    LinearLayout ll_icon, ll_content, ll_buttons;
     PrettyDialogCircularImageView iv_icon;
     RotateAnimation close_rotation_animation;
     boolean icon_animation = true;
@@ -66,6 +66,7 @@ public class PrettyDialog extends AppCompatDialog {
     }
 
     private void setupViews_Base(){
+        ll_icon = (LinearLayout) findViewById(R.id.ll_icon);
         ll_content = (LinearLayout) findViewById(R.id.ll_content);
         ll_buttons = (LinearLayout) findViewById(R.id.ll_buttons);
         iv_icon = (PrettyDialogCircularImageView) findViewById(R.id.iv_icon);
@@ -73,7 +74,7 @@ public class PrettyDialog extends AppCompatDialog {
         FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         lp.setMargins(0, resources.getDimensionPixelSize(R.dimen.pdlg_icon_size)/2, 0, 0);
         ll_content.setLayoutParams(lp);
-        ll_content.setPadding(0,(int)(1.25*resources.getDimensionPixelSize(R.dimen.pdlg_icon_size)/2),0,resources.getDimensionPixelSize(R.dimen.pdlg_space_1_0x));
+        ll_content.setPadding(0,(int)(1.0*resources.getDimensionPixelSize(R.dimen.pdlg_icon_size)/2),0,resources.getDimensionPixelSize(R.dimen.pdlg_space_1_0x));
 
         close_rotation_animation = new RotateAnimation(0, 180,
                 Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
@@ -177,6 +178,25 @@ public class PrettyDialog extends AppCompatDialog {
         iv_icon.setOnTouchListener(null);
         return this;
     }
+
+    public PrettyDialog setIconVisibility(Boolean visible){
+        if(visible==false) {
+            ll_icon.setVisibility(View.GONE);
+        }
+        else {
+            ll_icon.setVisibility(View.VISIBLE);
+        }
+        return this;
+    }
+
+    public PrettyDialog setBackgroundDismiss(Boolean close){
+
+        setCancelable(close);
+        setCanceledOnTouchOutside(close);
+
+        return this;
+    }
+
 
     public PrettyDialog setIconTint(Integer color){
         //iv_icon.setColorFilter(ContextCompat.getColor(context,color==null?default_icon_tint:color), PorterDuff.Mode.MULTIPLY);
