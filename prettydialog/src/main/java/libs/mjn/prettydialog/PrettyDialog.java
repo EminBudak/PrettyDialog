@@ -74,7 +74,7 @@ public class PrettyDialog extends AppCompatDialog {
         FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         lp.setMargins(0, resources.getDimensionPixelSize(R.dimen.pdlg_icon_size)/2, 0, 0);
         ll_content.setLayoutParams(lp);
-        ll_content.setPadding(0,(int)(1.0*resources.getDimensionPixelSize(R.dimen.pdlg_icon_size)/2),0,resources.getDimensionPixelSize(R.dimen.pdlg_space_1_0x));
+        ll_content.setPadding(0,(int)(0.5*resources.getDimensionPixelSize(R.dimen.pdlg_icon_size)/2),0,resources.getDimensionPixelSize(R.dimen.pdlg_space_1_0x));
 
         close_rotation_animation = new RotateAnimation(0, 180,
                 Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
