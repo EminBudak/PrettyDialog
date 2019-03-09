@@ -15,18 +15,21 @@
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:gravity="center"
             android:paddingLeft="@dimen/pdlg_space_1.0x"
             android:paddingRight="@dimen/pdlg_space_1.0x"
             android:paddingTop="@dimen/pdlg_space_1.0x"
             android:textColor="@color/pdlg_color_black"
             android:textSize="@dimen/pdlg_tv_title"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
             android:fadeScrollbars="true"
             android:fillViewport="true"
             android:scrollbars="vertical">
@@ -43,17 +46,17 @@
                     android:gravity="center"
                     android:padding="@dimen/pdlg_space_1.0x"
                     android:textColor="@color/pdlg_color_black"
-                    android:textSize="@dimen/pdlg_tv_message"/>
-
-
-                <LinearLayout
-                    android:id="@+id/ll_buttons"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"></LinearLayout>
-
+                    android:textSize="@dimen/pdlg_tv_message" />
             </LinearLayout>
         </ScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/ll_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical"></LinearLayout>
 
     </LinearLayout>
 
