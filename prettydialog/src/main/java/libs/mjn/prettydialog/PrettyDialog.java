@@ -59,7 +59,7 @@ public class PrettyDialog extends AppCompatDialog {
         getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         DisplayMetrics displayMetrics = resources.getDisplayMetrics();
         float pxWidth = displayMetrics.widthPixels;
-        getWindow().setLayout((int)(pxWidth*0.75),ViewGroup.LayoutParams.WRAP_CONTENT);
+        getWindow().setLayout((int)(pxWidth*0.90),ViewGroup.LayoutParams.WRAP_CONTENT);
         getWindow().getAttributes().windowAnimations = R.style.pdlg_default_animation;
         thisDialog = this;
         setupViews_Base();
